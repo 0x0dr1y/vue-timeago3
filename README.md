@@ -1,4 +1,4 @@
-# ⏳ vue-timeago3 ![Vue version](https://img.shields.io/badge/vue-3.2.6-brightgreen.svg) [![NPM version](https://img.shields.io/npm/v/vue-timeago3.svg)](https://npmjs.com/package/vue-timeago) [![NPM downloads](https://img.shields.io/npm/dm/vue-timeago3.svg)](https://npmjs.com/package/vue-timeago) ![size](https://img.shields.io/bundlephobia/min/vue-timeago3)
+# ⏳ vue-timeago3 ![Vue version](https://img.shields.io/badge/vue-3.2.6-brightgreen.svg) ![date-fns version](https://img.shields.io/npm/dependency-version/vue-timeago3/date-fns) [![NPM version](https://img.shields.io/npm/v/vue-timeago3.svg)](https://npmjs.com/package/vue-timeago3) [![NPM downloads](https://img.shields.io/npm/dm/vue-timeago3.svg)](https://npmjs.com/package/vue-timeago3) ![size](https://img.shields.io/bundlephobia/min/vue-timeago3)
 
 A time ago component for Vue.js 3 based on [vue-timeago for Vue 2 by egoist](https://github.com/egoist/vue-timeago).
 
