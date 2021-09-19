@@ -1,36 +1,69 @@
 {
-  "name": "vue-timeago3",
+  "name": "vue-typeahead3",
   "version": "0.1.2",
-  "files": [ "dist" ],
-  "main": "./dist/vue-timeago.umd.js",
-  "module": "./dist/vue-timeago.es.js",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-typeahead.umd.js",
+  "module": "./dist/vue-typeahead.es.js",
+  "style": "./dist/vue-typeahead.css",
   "exports": {
     ".": {
-        "import": "./dist/vue-timeago.es.js",
-        "require": "./dist/vue-timeago.umd.js"
+      "import": "./dist/vue-typeahead.es.js",
+      "require": "./dist/vue-typeahead.umd.js"
+    },
+    "./dist/vue-typeahead.css": {
+      "import": "./dist/vue-typeahead.css",
+      "require": "./dist/vue-typeahead.css"
     }
   },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrDeerly/vue-typeahead.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrDeerly/vue-typeahead/issues"
+  },
+  "homepage": "https://github.com/MrDeerly/vue-typeahead",
+  "keywords": [
+    "vue",
+    "vue3",
+    "search",
+    "suggestion",
+    "input",
+    "list",
+    "autocomplete",
+    "autosuggest",
+    "searchInput",
+    "typeahead",
+    "next",
+    "typescript"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
-  },
-
-  "dependencies": {
-    "date-fns": "^2.24.0"
+    "serve": "vite preview",
+    "lint": "eslint"
   },
   "peerDependencies": {
     "vue": "^3.2.6"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
     "@vitejs/plugin-vue": "^1.6.1",
     "@vue/compiler-sfc": "^3.2.6",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^7.18.0",
     "prettier": "2.4.1",
-    "typescript": "^4.3.2",
+    "typescript": "^4.4.3",
     "vite": "^2.5.4",
-    "vue-tsc": "^0.2.2"
-  }
+    "vue-tsc": "^0.2.2",
+    "dart-sass": "^1.25.0",
+    "sass": "^1.41.1"
+  },
+  "description": "A time ago component for Vue.js 3 based on [vue-timeago for Vue 2 by egoist](https://github.com/egoist/vue-timeago).",
+  "author": "MrDeerly"
 }
