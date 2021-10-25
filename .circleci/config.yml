@@ -16,7 +16,7 @@ jobs:
       - checkout:
           name: "GIT checkout"
       - run:
-          name: "Build"
+          name: "Clean NPM installation"
           command: "npm ci"
       - run:
           name: "Build"
