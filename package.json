@@ -17,7 +17,7 @@
   },
 
   "dependencies": {
-    "date-fns": "^2.24.0"
+    "date-fns": "^2.25.0"
   },
   "peerDependencies": {
     "vue": "^3.2.6"
