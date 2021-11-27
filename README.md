@@ -35,7 +35,7 @@ To register the plugin simply import and register it using the new global vue3 a
 <a name="sectionRegister"/>
 
 ```javascript
-// src/main.js
+// src/main.ts
 import { createApp } from 'vue'
 import timeago from 'vue-timeago3'
 
@@ -50,7 +50,7 @@ app.mount('#app')
 During the registration of the component you can specify a set of options, which will mutate the plugin **globally**. If you don't want to define global settings, skip this section and use props instead. To use options, simply pass them during the registration as an object:
 
 ```javascript
-// src/main.js
+// src/main.ts
 import { createApp } from 'vue'
 import timeago from 'vue-timeago3'
 
