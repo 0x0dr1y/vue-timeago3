@@ -2,13 +2,16 @@
   "name": "examples",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "uninstall-dev-package": "npm r vue-timeago3-1.0.2.tgz",
+    "install-dev-package": "npm i ../vue-timeago3-1.0.2.tgz",
+    "dev": "npm run uninstall-dev-package && npm run install-dev-package && vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview"
   },
   "dependencies": {
+    "examples": "file:",
     "vue": "^3.2.16",
-    "vue-timeago3": "file:../vue-timeago3-1.0.1.tgz"
+    "vue-timeago3": "file:../vue-timeago3-1.0.2.tgz"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",

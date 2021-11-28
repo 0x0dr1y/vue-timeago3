@@ -6,8 +6,8 @@ import vue from '@vitejs/plugin-vue';
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.js'),
-      name: 'VuePatternfly',
+      entry: path.resolve(__dirname, 'src/install.ts'),
+      name: 'VueTimeago3',
       fileName: format => `vue-timeago.${format}.js`,
     },
     rollupOptions: {
