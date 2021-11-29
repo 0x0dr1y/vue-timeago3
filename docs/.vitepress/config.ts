@@ -1,6 +1,6 @@
 module.exports = {
     title: '⏳ vue-timeago3',
-    description: 'Just playing around.',
+    description: 'vue-timeago3 is a tiny component for Vue.js 3, to show the time passed since a specific date. You simply pass a date and get somewhat like 10 seconds ago, 3 weeks ago, ... printed by the component',
     sidebar: "auto",
     base: "/vue-timeago3/",
 

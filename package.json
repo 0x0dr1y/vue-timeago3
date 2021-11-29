@@ -12,6 +12,26 @@
       "require": "./dist/vue-timeago.umd.js"
     }
   },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrDeerly/vue-timeago3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrDeerly/vue-timeago3/issues"
+  },
+  "homepage": "https://mrdeerly.github.io/vue-timeago3/",
+  "keywords": [
+    "vue",
+    "vue3",
+    "timeago",
+    "datefns",
+    "date",
+    "whileago",
+    "currentTime",
+    "distance",
+    "time",
+  ],
   "scripts": {
     "dev": " vite build && npm --prefix ./dist pack && npm --prefix examples run dev",
     "build": "vue-tsc --noEmit && vite build",
