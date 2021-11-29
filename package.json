@@ -1,6 +1,6 @@
 {
   "name": "vue-timeago3",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "files": [
     "dist"
   ],
@@ -15,7 +15,10 @@
   "scripts": {
     "dev": " vite build && npm --prefix ./dist pack && npm --prefix examples run dev",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "dependencies": {
     "date-fns": "^2.26.0"
@@ -36,6 +39,7 @@
     "typescript": "^4.5.2",
     "vite": "^2.6.14",
     "vue-eslint-parser": "^8.0.1",
-    "vue-tsc": "^0.29.6"
+    "vue-tsc": "^0.29.6",
+    "vitepress": "^0.20.1"
   }
 }
