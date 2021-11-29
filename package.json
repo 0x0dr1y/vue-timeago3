@@ -30,7 +30,7 @@
     "whileago",
     "currentTime",
     "distance",
-    "time",
+    "time"
   ],
   "scripts": {
     "dev": " vite build && npm --prefix ./dist pack && npm --prefix examples run dev",
