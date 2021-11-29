@@ -1,7 +1,7 @@
 import defaultConverter, {converterOptions} from './converter/defaultConverter'
 import {defineComponent, h, onBeforeMount, onBeforeUnmount, PropType, ref, watch} from 'vue';
 import {TimeagoOptions} from "./install";
-
+import { Locale } from "date-fns";
 
 const createTimeago = (opts: TimeagoOptions = {}): ReturnType<typeof defineComponent> => {
     const name = opts.name || 'Timeago'
@@ -31,6 +31,11 @@ const createTimeago = (opts: TimeagoOptions = {}): ReturnType<typeof defineCompo
                 type: Object as PropType<converterOptions>,
                 required: false,
                 default: null,
+            },
+            locale: {
+                type: Object as PropType<Locale>,
+                required: false,
+                default: null,
             }
         },
         setup(props) {
@@ -52,7 +57,8 @@ const createTimeago = (opts: TimeagoOptions = {}): ReturnType<typeof defineCompo
                 const converter = props.converter || defaultConverter
                 return converter(
                     datetime || props.datetime,
-                    props.converterOptions || {}
+                    props.converterOptions || opts.converterOptions,
+                    props.locale || opts.locale,
                 )
             };
 
