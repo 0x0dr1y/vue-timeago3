@@ -59,7 +59,7 @@
     "typescript": "^4.5.2",
     "vite": "^2.6.14",
     "vue-eslint-parser": "^8.0.1",
-    "vue-tsc": "^0.29.6",
+    "vue-tsc": "^0.29.7",
     "vitepress": "^0.20.1"
   }
 }
