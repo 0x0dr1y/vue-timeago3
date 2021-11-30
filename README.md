@@ -28,7 +28,7 @@ See [date-fns/formatDistanceToNow](https://date-fns.org/v2.26.0/docs/formatDista
 ## Usage
 <a name="sectionUsage"/>
 
-**Visit the [docs](mrdeerly.github.io/vue-timeago3/) for more details! 
+**Visit the [docs](https://mrdeerly.github.io/vue-timeago3/) for more details!**
 
 ### Installation
 <a name="sectionInstall"/>
