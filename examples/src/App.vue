@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import {ru} from 'date-fns/locale'
+
 const now = new Date()
 
 
@@ -26,7 +28,7 @@ const oneYearAgo = () => {
 <template>
   <span>
     <b>Now was:</b>
-  <timeago :datetime="now" :converter-options="{ includeSeconds: true}" :auto-update="1"/>
+  <timeago :datetime="now" :locale="ru" :converter-options="{ includeSeconds: true}" :auto-update="1"/>
   </span>
   <span>
     <b>One hour was:  </b>
