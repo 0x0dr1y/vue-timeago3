@@ -21,7 +21,7 @@ A time ago component for Vue.js 3 based on [vue-timeago for Vue 2 by egoist](htt
 | 0 - 5 secs | less than 5 seconds ago |
 | 5 - 10 secs |  less than 10 seconds ago |
 | 10 - 20 secs |  less than 20 seconds ago |
-|20 - 40 secs | half a minute ago |
+| 20 - 40 secs | half a minute ago |
 | 40 - 60 secs | less than a minute ago |
 
 See [date-fns/formatDistanceToNow](https://date-fns.org/v2.26.0/docs/formatDistanceToNow) for more details.
