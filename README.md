@@ -28,6 +28,8 @@ See [date-fns/formatDistanceToNow](https://date-fns.org/v2.26.0/docs/formatDista
 ## Usage
 <a name="sectionUsage"/>
 
+**Visit the [docs](mrdeerly.github.io/vue-timeago3/) for more details! 
+
 ### Installation
 <a name="sectionInstall"/>
 Currently the plugin is available via NPM and Yarn. To install it use one of the two package managers.
