@@ -18,10 +18,6 @@ module.exports = {
                 link: '/guide/configuration',
                 activeMatch: '^/guide/configuration'
             },
-            {
-                text: 'GitHub',
-                link: 'https://github.com/MrDeerly/vue-timeago3'
-            }
         ],
 
         sidebar: {
