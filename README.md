@@ -17,6 +17,7 @@ A time ago component for Vue.js 3 based on [vue-timeago for Vue 2 by egoist](htt
 ### Example
 
 | distance to now | result |
+|----------------------|----------------------|
 | 0 - 5 secs | less than 5 seconds ago |
 | 5 - 10 secs |  less than 10 seconds ago |
 | 10 - 20 secs |  less than 20 seconds ago |
