@@ -1,8 +1,6 @@
-name: coverage badge
+name: Code Coverage Badge Pipeline
 on:
   push:
-    branches: [ master ]
-  pull_request:
     branches: [ master ]
 jobs:
   checks:
@@ -21,14 +19,13 @@ jobs:
           SUMMARY="$(npm test -- --coverageReporters='text-summary' | tail -2 | head -1)"
           TOKENS=($SUMMARY)
           echo "COVERAGE=$(echo ${TOKENS[2]})" >> $GITHUB_ENV
-
       - name: Create Coverage Badge
         uses: schneegans/dynamic-badges-action@v1.1.0
         with:
           auth: ${{ secrets.GIST_SECRET }}
           gistID: 51a8c6c4f125bd6ec25a14a6f12e28bc
           filename: vue-timeago3_coverage.json
-          label: coverage
+          label: Code Coverage
           message: ${{ env.COVERAGE }}
           namedLogo: jest
           color: green
