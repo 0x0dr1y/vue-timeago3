@@ -3,6 +3,7 @@
 A time ago component for Vue.js 3 based on [vue-timeago for Vue 2 by egoist](https://github.com/egoist/vue-timeago).
 
 ## Table of Contents
+
 - [About](#sectionAbout)
 - [Usage](#sectionUsage)
   - [Installation](#sectionInstall)
@@ -10,27 +11,31 @@ A time ago component for Vue.js 3 based on [vue-timeago for Vue 2 by egoist](htt
   - [Component](#sectionComponent)
 
 ## About
+
 <a name="sectionAbout"/>
 
 **vue-timeago3** is a tiny component for Vue.js 3, to show the time passed since a specific date. You simply pass a date and get somewhat like `10 seconds ago`, `3 weeks ago`, `...` printed by the component
 
 ### Example
 
-| distance to now | result |
-|----------------------|----------------------|
-| 0 - 5 secs | less than 5 seconds ago |
-| 5 - 10 secs |  less than 10 seconds ago |
-| 10 - 20 secs |  less than 20 seconds ago |
-| 20 - 40 secs | half a minute ago |
-| 40 - 60 secs | less than a minute ago |
+| distance to now | result                   |
+| --------------- | ------------------------ |
+| 0 - 5 secs      | less than 5 seconds ago  |
+| 5 - 10 secs     | less than 10 seconds ago |
+| 10 - 20 secs    | less than 20 seconds ago |
+| 20 - 40 secs    | half a minute ago        |
+| 40 - 60 secs    | less than a minute ago   |
 
 See [date-fns/formatDistanceToNow](https://date-fns.org/v2.26.0/docs/formatDistanceToNow) for more details.
+
 ## Usage
+
 <a name="sectionUsage"/>
 
 **Visit the [docs](https://mrdeerly.github.io/vue-timeago3/) for more details!**
 
 ### Installation
+
 <a name="sectionInstall"/>
 Currently the plugin is available via NPM and Yarn. To install it use one of the two package managers.
 
@@ -43,6 +48,7 @@ $ yarn add vue-timeago3
 ```
 
 ### Register Plugin
+
 To register the plugin simply import and register it using the new global vue3 api. As an alternative the plugin could be imported in specific components only.
 
 <a name="sectionRegister"/>
@@ -60,6 +66,7 @@ app.mount('#app')
 ```
 
 #### Plugin Options
+
 During the registration of the component you can specify a set of options, which will mutate the plugin **globally**. If you don't want to define global settings, skip this section and use props instead. To use options, simply pass them during the registration as an object:
 
 ```javascript
@@ -74,27 +81,30 @@ const timeagoOptions = {
   converterOptions: {
       includeSeconds: false,
   }
-}  
-  
+}
+
 app.use(timeago,  timeagoOptions) // register timeago with options
 ...
 app.mount('#app')
 ```
-As of version 1.0.0 the following options are available: 
 
-| option               | type                                         | description                                                                                                                                                                                                                                                                                                            |
-|----------------------|----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **name**             | `string`                                     | Register the component with a custom name. Default is: `timeago`                                                                                                                                                                                                                                                       |
-| **locale**           | `Locale`    (see [date-fns/Locale](https://date-fns.org/v2.26.0/docs/Locale))                                   | The ```locale``` specifies the language which is used to render the date. All available ``date-fns`` locales are supported by default. |
-| **converter**        | `(date, converterOptions) => string` | A **converter** that formats regular dates in `x Seconds ago`, or in `xxx` style. Check out the [default converter](ahttps://github.com/MrDeerly/vue-timeago3/blob/master/src/defaultConverter.js) which uses [date-fns formatDistanceToNow](https://date-fns.org/v2.24.0/docs/formatDistanceToNow)                           |
-| **converterOptions** | `Object`                                     | Pass some extra settings to the default converter mentioned above. It supports the main options of `date-fns`, namingly:   <br/><br/>  `includeSeconds` - `boolean` - distances less than a minute are more detailed </br> `addSuffix` - `boolean` - results specifies if now is earlier or later than the date passed |
+As of version 1.0.0 the following options are available:
+
+| option               | type                                                                       | description                                                                                                                                                                                                                                                                                                         |
+| -------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **name**             | `string`                                                                   | Register the component with a custom name. Default is: `timeago`                                                                                                                                                                                                                                                    |
+| **locale**           | `Locale` (see [date-fns/Locale](https://date-fns.org/v2.26.0/docs/Locale)) | The `locale` specifies the language which is used to render the date. All available `date-fns` locales are supported by default.                                                                                                                                                                                    |
+| **converter**        | `(date, converterOptions) => string`                                       | A **converter** that formats regular dates in `x Seconds ago`, or in `xxx` style. Check out the [default converter](ahttps://github.com/MrDeerly/vue-timeago3/blob/master/src/defaultConverter.js) which uses [date-fns formatDistanceToNow](https://date-fns.org/v2.24.0/docs/formatDistanceToNow)                 |
+| **converterOptions** | `Object`                                                                   | Pass some extra settings to the default converter mentioned above. It supports the main options of `date-fns`, namingly: <br/><br/> `includeSeconds` - `boolean` - distances less than a minute are more detailed </br> `addSuffix` - `boolean` - results specifies if now is earlier or later than the date passed |
 
 ### Component
+
 <a name="sectionComponent"/>
 
 Once the plugin is registered you can straight up use it in your app.
 
-**Basic usage**: 
+**Basic usage**:
+
 ```jsx
 <template>
   <timeago :datetime="date"/>
@@ -110,12 +120,14 @@ data() {
 ...
 </script
 ```
+
 #### Props
+
 Instead of configurating the plugin during the registration, you can also configuate the component via `props`.
-| property             | type                                        | required           | default | description                                                                                                                                                                                                                                   |
+| property | type | required | default | description |
 |----------------------|---------------------------------------------|--------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **datetime**         | `string \| Date \| number`                  | :heavy_check_mark: |         | The `datetime` used to calculate the "time ago"                                                                                                                                                                                               |
-| **autoUpdate**       | `number \| boolean`                         |         :x:        | `false` | The period of time to update the component, **in seconds**. <br/> This can be omitted by setting it to `0` or `false`. <br/> <br/>  The default value for `true` is `60`(seconds). Instead of passing `true` you can also pass a custom time. |
-| **locale**           | `Locale`    (see [date-fns/Locale](https://date-fns.org/v2.26.0/docs/Locale))   | :x: | `en`                                | The ```locale``` specifies the language which is used to render the date. All available ``date-fns`` locales are supported by default. |
-| **converter**        | `date, converterOptions) => string` |         :x:        |         | See plugin options above                                                                                                                                                                                                                      |
-| **converterOptions** | `Object`                                    |         :x:        |         | See plugin options above                                                                                                                                                                                                                      |
+| **datetime** | `string \| Date \| number` | :heavy_check_mark: | | The `datetime` used to calculate the "time ago" |
+| **autoUpdate** | `number \| boolean` | :x: | `false` | The period of time to update the component, **in seconds**. <br/> This can be omitted by setting it to `0` or `false`. <br/> <br/> The default value for `true` is `60`(seconds). Instead of passing `true` you can also pass a custom time. |
+| **locale** | `Locale` (see [date-fns/Locale](https://date-fns.org/v2.26.0/docs/Locale)) | :x: | `en` | The `locale` specifies the language which is used to render the date. All available `date-fns` locales are supported by default. |
+| **converter** | `date, converterOptions) => string` | :x: | | See plugin options above |
+| **converterOptions** | `Object` | :x: | | See plugin options above |
