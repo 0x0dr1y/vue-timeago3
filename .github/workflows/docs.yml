@@ -1,9 +1,9 @@
 name: Generate and Deploy Docs
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,7 +17,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Install Dependencies
-      - run: npm run docs:build
+        run: npm run docs:build
       - name: Init new repo in dist folder and commit generated files
         run: |
           cd docs/.vitepress/dist
@@ -26,8 +26,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m 'deploy'
-
-      - name: Force push to destination branch
+      - name: Push to GitHub pages
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
