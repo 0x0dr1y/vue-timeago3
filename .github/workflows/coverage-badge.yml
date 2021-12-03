@@ -25,7 +25,7 @@ jobs:
           auth: ${{ secrets.GIST_SECRET }}
           gistID: 51a8c6c4f125bd6ec25a14a6f12e28bc
           filename: vue-timeago3_coverage.json
-          label: Code Coverage
+          label: Test Coverage
           message: ${{ env.COVERAGE }}
           namedLogo: jest
           color: brightgreen
