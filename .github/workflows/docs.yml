@@ -5,20 +5,20 @@ on:
   pull_request:
     branches: [master]
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Node
+      - name: Setup NodeJS
         uses: actions/setup-node@v2
         with:
           node-version: "14"
           cache: "npm"
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
-      - name: Install Dependencies
+      - name: Generate static files
         run: npm run docs:build
-      - name: Init new repo in dist folder and commit generated files
+      - name: Commit files
         run: |
           cd docs/.vitepress/dist
           git init
