@@ -20,10 +20,11 @@ jobs:
       - name: ESLint
         run: npm run lint
       - name: Prettier
-        run: npx prettier --check "src/**/*.js"
+        run: npx prettier --check "src/**/*.ts"
       - name: Vue TSC
         run: npx vue-tsc --noEmit
   test:
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -37,6 +38,7 @@ jobs:
       - name: Unit Tests
         run: npm run test
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

@@ -39,7 +39,8 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
-    "test": "jest --config jest.config.ts"
+    "test": "jest --config jest.config.ts",
+    "lint": "eslint src --ext .ts"
   },
   "dependencies": {
     "date-fns": "^2.26.0"
