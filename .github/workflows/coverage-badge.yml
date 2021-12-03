@@ -1,4 +1,4 @@
-name: Code Coverage Badge Pipeline
+name: Generate CodeCoverage Badge
 on:
   push:
     branches: [ master ]
