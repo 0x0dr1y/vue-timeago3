@@ -1,0 +1,33 @@
+name: Generate and Deploy Docs
+on:
+  push:
+    branches: [master]
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          cache: "npm"
+      - name: Install dependencies
+        run: npm install
+      - name: Generate static files
+        run: npm run docs:build
+      - name: Commit files
+        run: |
+          cd docs/.vitepress/dist
+          git init
+          git add -A
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m 'deploy'
+      - name: Push to GitHub pages
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: docs
+          force: true
+          directory: ./docs/.vitepress/dist

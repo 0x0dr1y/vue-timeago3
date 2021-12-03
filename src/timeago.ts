@@ -51,7 +51,7 @@ const createTimeago = (
       },
     },
     setup(props) {
-      const updateTimer = ref<any>();
+      const updateTimer = ref<ReturnType<typeof setInterval>>();
 
       // start the update timer
       onBeforeMount(() => {

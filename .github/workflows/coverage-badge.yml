@@ -1,0 +1,31 @@
+name: Generate CodeCoverage Badge
+on:
+  push:
+    branches: [ master ]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          cache: "npm"
+      - name: Install dependencies
+        run: npm install
+      - name: Run unit tests with coverage
+        run: |
+          SUMMARY="$(npm test -- --coverageReporters='text-summary' | tail -2 | head -1)"
+          TOKENS=($SUMMARY)
+          echo "COVERAGE=$(echo ${TOKENS[2]})" >> $GITHUB_ENV
+      - name: Create Coverage Badge
+        uses: schneegans/dynamic-badges-action@v1.1.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: 51a8c6c4f125bd6ec25a14a6f12e28bc
+          filename: vue-timeago3_coverage.json
+          label: Code Coverage
+          message: ${{ env.COVERAGE }}
+          namedLogo: jest
+          color: green

@@ -1,0 +1,53 @@
+name: Lint, Test, Build
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          cache: "npm"
+      - name: Install dependencies
+        run: npm install
+      - name: Run ESLint
+        run: npm run lint
+      - name: Run Prettier
+        run: npx prettier --check "src/**/*.ts"
+      - name: Run Vue TSC
+        run: npx vue-tsc --noEmit
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          cache: "npm"
+      - name: Install dependencies
+        run: npm install
+      - name: Run Unit Tests
+        run: npm run test
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          cache: "npm"
+      - name: Install dependencies
+        run: npm install
+      - name: Build Library
+        run: npx vite build
