@@ -28,4 +28,4 @@ jobs:
           label: Code Coverage
           message: ${{ env.COVERAGE }}
           namedLogo: jest
-          color: green
+          color: brightgreen
