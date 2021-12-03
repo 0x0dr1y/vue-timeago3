@@ -1,9 +1,5 @@
 name: Create Release
-on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [ master ]
+on: workflow_dispatch
 
 jobs:
   release:
@@ -24,6 +20,6 @@ jobs:
       - run: npm install
       - name: npm config
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-      - run: npm run release --ci --dry-run
+      - run: npm run release --ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
