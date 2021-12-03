@@ -1,8 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue';
+import { createApp } from "vue";
+import App from "./App.vue";
 // @ts-ignore
-import timeago from 'vue-timeago3'
+import timeago from "vue-timeago3";
 
 createApp(App)
-    .use(timeago) // register timeago
-    .mount('#app')
+  .use(timeago) // register timeago
+  .mount("#app");

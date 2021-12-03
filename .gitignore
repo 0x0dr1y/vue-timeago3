@@ -4,3 +4,4 @@ dist
 dist-ssr
 *.local
 /vue-timeago3-0.1.2.tgz
+coverage
