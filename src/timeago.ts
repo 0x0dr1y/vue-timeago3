@@ -1,5 +1,5 @@
 import defaultConverter, {converterOptions} from './converter/defaultConverter'
-import {defineComponent, h, onBeforeMount, onBeforeUnmount, PropType, ref, watch} from 'vue';
+import {defineComponent, h, onBeforeMount, onBeforeUnmount, PropType, ref, watch, defineExpose} from 'vue';
 import {TimeagoOptions} from "./install";
 import { Locale } from "date-fns";
 
@@ -39,7 +39,7 @@ const createTimeago = (opts: TimeagoOptions = {}): ReturnType<typeof defineCompo
             }
         },
         setup(props) {
-            const updateTimer = ref<NodeJS.Timer>()
+            const updateTimer = ref<any>()
 
 
             // start the update timer
@@ -107,7 +107,8 @@ const createTimeago = (opts: TimeagoOptions = {}): ReturnType<typeof defineCompo
                 deep: true
             })
 
-            return {timeago}
+
+            return {timeago, updateTimer}
         },
         render() {
             return h(

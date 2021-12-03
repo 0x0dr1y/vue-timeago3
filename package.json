@@ -38,7 +38,8 @@
     "serve": "vite preview",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "test": "jest --config jest.config.ts"
   },
   "dependencies": {
     "date-fns": "^2.26.0"
@@ -47,19 +48,24 @@
     "vue": "^3.2.6"
   },
   "devDependencies": {
-    "@types/node": "^16.11.10",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.11",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vitejs/plugin-vue": "^1.10.1",
     "@vue/compiler-sfc": "^3.2.23",
+    "@vue/test-utils": "^2.0.0-rc.17",
     "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^8.1.1",
+    "jest": "^27.4.2",
     "prettier": "2.5.0",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0",
     "typescript": "^4.5.2",
     "vite": "^2.6.14",
+    "vitepress": "^0.20.1",
     "vue-eslint-parser": "^8.0.1",
-    "vue-tsc": "^0.29.7",
-    "vitepress": "^0.20.1"
+    "vue-tsc": "^0.29.7"
   }
 }

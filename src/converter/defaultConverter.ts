@@ -5,7 +5,7 @@ export type converterOptions = {
   addSuffix?: boolean,
 }
 
-export default (date: string | Date, converterOptions: converterOptions = {}, locale: Locale): string => {
+export default (date: string | Date, converterOptions: converterOptions = {}, locale?: Locale): string => {
   if (typeof date === 'string') {
     date = parseISO(date)
   }
