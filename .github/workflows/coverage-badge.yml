@@ -18,7 +18,7 @@ jobs:
         run: npm install
       - name: Run unit tests with coverage
         run: |
-          SUMMARY="$(npm run test --coverage --coverageReporters=text-summary | tail -3 | head -1)"
+          SUMMARY="$(npm test -- --coverageReporters='text-summary' | tail -2 | head -1)"
           TOKENS=($SUMMARY)
           echo "COVERAGE=$(echo ${TOKENS[2]})" >> $GITHUB_ENV
 
