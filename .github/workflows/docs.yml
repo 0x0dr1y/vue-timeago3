@@ -1,7 +1,7 @@
 name: Generate and Deploy Docs
 on:
-  push:
-    branches: [master]
+  release:
+    types: [published]
 jobs:
   generate:
     runs-on: ubuntu-latest
