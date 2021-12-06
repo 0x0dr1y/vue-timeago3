@@ -1,6 +1,7 @@
 node_modules
 .DS_Store
 dist
+dist_types
 dist-ssr
 *.local
 /vue-timeago3-0.1.2.tgz

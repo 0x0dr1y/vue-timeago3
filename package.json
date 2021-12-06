@@ -6,6 +6,7 @@
   ],
   "main": "./dist/vue-timeago.umd.js",
   "module": "./dist/vue-timeago.es.js",
+  "typings": "./dist_types/**/*.d.ts",
   "exports": {
     ".": {
       "import": "./dist/vue-timeago.es.js",
@@ -33,8 +34,8 @@
     "time"
   ],
   "scripts": {
-    "dev": " vite build && npm --prefix ./dist pack && npm --prefix examples run dev",
-    "build": "vue-tsc --noEmit && vite build",
+    "dev": "vite build && npm --prefix ./dist pack && npm --prefix examples run dev",
+    "build": "vue-tsc --declaration --emitDeclarationOnly && vite build",
     "serve": "vite preview",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
