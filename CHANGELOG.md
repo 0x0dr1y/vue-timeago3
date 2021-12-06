@@ -1,3 +1,5 @@
+## [2.1.2](https://github.com/MrDeerly/vue-timeago3/compare/v2.1.1...v2.1.2) (2021-12-06)
+
 ## [2.1.1](https://github.com/MrDeerly/vue-timeago3/compare/v2.1.0...v2.1.1) (2021-12-03)
 
 
