@@ -63,7 +63,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^8.1.1",
     "jest": "^27.4.2",
-    "prettier": "2.5.0",
+    "prettier": "2.5.1",
     "release-it": "^14.11.8",
     "ts-jest": "^27.0.7",
     "ts-node": "^10.4.0",
