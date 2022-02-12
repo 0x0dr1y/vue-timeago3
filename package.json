@@ -71,6 +71,6 @@
     "vite": "^2.7.13",
     "vitepress": "^0.21.6",
     "vue-eslint-parser": "^8.2.0",
-    "vue-tsc": "^0.31.1"
+    "vue-tsc": "^0.31.2"
   }
 }
