@@ -17,7 +17,7 @@ export default (
 
   const { includeSeconds, addSuffix = true, useStrict = false } = converterOptions;
 
-  if(useStrict) {
+  if (useStrict) {
     return formatDistanceToNowStrict(date, {
       addSuffix,
       locale
