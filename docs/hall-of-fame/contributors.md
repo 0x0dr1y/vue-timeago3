@@ -12,6 +12,11 @@ Having the `defaultConverter` based on [date-fns](https://github.com/date-fns/da
 
 ## Contributors
 
+
 | ![gekkedev](https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/17025257?v=4&h=100&w=100&fit=cover&mask=circle&maxage=7d) |
 | :-----------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                   [gekkedev](https://github.com/gekkedev)                                                   |
+
+| ![srabouin](https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/1645693?v=4&h=100&w=100&fit=cover&mask=circle&maxage=7d)  |
+| :-----------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                   [srabouin](https://github.com/srabouin)                                                   |
