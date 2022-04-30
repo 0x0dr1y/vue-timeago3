@@ -1,8 +1,14 @@
-import { Locale, parseISO, formatDistanceToNow } from "date-fns";
+import {
+  Locale,
+  parseISO,
+  formatDistanceToNow,
+  formatDistanceToNowStrict,
+} from "date-fns";
 
 export type converterOptions = {
   includeSeconds?: boolean;
   addSuffix?: boolean;
+  useStrict?: boolean;
 };
 
 export default (
@@ -14,7 +20,18 @@ export default (
     date = parseISO(date);
   }
 
-  const { includeSeconds, addSuffix = true } = converterOptions;
+  const {
+    includeSeconds,
+    addSuffix = true,
+    useStrict = false,
+  } = converterOptions;
+
+  if (useStrict) {
+    return formatDistanceToNowStrict(date, {
+      addSuffix,
+      locale,
+    });
+  }
 
   return formatDistanceToNow(date, {
     includeSeconds,

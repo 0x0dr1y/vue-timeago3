@@ -1,10 +1,15 @@
 import defaultConverter from "../../src/converter/defaultConverter";
-import { parseISO, formatDistanceToNow } from "date-fns";
+import {
+  formatDistanceToNow,
+  formatDistanceToNowStrict,
+  parseISO,
+} from "date-fns";
 import { es } from "date-fns/locale";
 
 jest.mock("date-fns", () => ({
   parseISO: jest.fn(),
   formatDistanceToNow: jest.fn(),
+  formatDistanceToNowStrict: jest.fn(),
 }));
 
 const date = new Date();
@@ -50,6 +55,15 @@ describe("defaultConverter", () => {
     expect(formatDistanceToNow).toHaveBeenCalledWith(date, {
       addSuffix: false,
       includeSeconds: true,
+      locale: es,
+    });
+  });
+
+  it("should use the strict mode", () => {
+    defaultConverter(date, { addSuffix: true, useStrict: true }, es);
+
+    expect(formatDistanceToNowStrict).toHaveBeenCalledWith(date, {
+      addSuffix: true,
       locale: es,
     });
   });
