@@ -90,6 +90,7 @@ const createTimeago = (
         if (props.autoUpdate) {
           const autoUpdate = props.autoUpdate === true ? 60 : props.autoUpdate;
           updateTimer.value = setInterval(() => {
+            /* istanbul ignore next */
             convert(props.datetime);
           }, autoUpdate * 1000);
         }
