@@ -1,6 +1,6 @@
 {
   "name": "vue-timeago3",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "files": [
     "dist"
   ],
@@ -31,7 +31,8 @@
     "whileago",
     "currentTime",
     "distance",
-    "time"
+    "time",
+    "front-end"
   ],
   "scripts": {
     "dev": "vite build && npm --prefix ./dist pack && npm --prefix examples run dev",
