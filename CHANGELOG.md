@@ -1,3 +1,12 @@
+
+
+# [2.2.0](https://github.com/MrDeerly/vue-timeago3/compare/v2.1.1...v2.2.0) (2022-04-30)
+
+
+### Features
+
+* add strict option for defaultConverter ([#231](https://github.com/MrDeerly/vue-timeago3/issues/231)) ([6d8097a](https://github.com/MrDeerly/vue-timeago3/commit/6d8097ab5a0d8101f719e31930c22b9870cea3f7))
+
 ## [2.1.1](https://github.com/MrDeerly/vue-timeago3/compare/v2.1.0...v2.1.1) (2021-12-03)
 
 
@@ -26,4 +35,3 @@
 
 
 ## [1.0.1](https://github.com/MrDeerly/vue-timeago3/compare/v2.1.0...v2.1.1) (2021-09-18)
-
