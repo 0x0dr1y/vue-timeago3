@@ -165,6 +165,7 @@ If both global and component options are used, the component options will be hig
 >
 > - `includeSeconds` - `boolean` - distances less than a minute are more detailed
 > - `addSuffix` - `boolean` - results specifies if now is earlier or later than the date passed
+> - `useStrict` - `boolean` - use strict units, does not use helpers like 'almost', 'over', 'less than' and the like
 
 - **type:** `Record<string, boolean>`
 - **required:** :x:
