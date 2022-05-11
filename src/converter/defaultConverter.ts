@@ -9,6 +9,8 @@ export type converterOptions = {
   includeSeconds?: boolean;
   addSuffix?: boolean;
   useStrict?: boolean;
+  unit?: 'second' | 'minute' | 'hour' | 'day' | 'month' | 'year';
+  roundingMethod?: 'floor' | 'ceil' | 'round';
 };
 
 export default (
@@ -24,12 +26,16 @@ export default (
     includeSeconds,
     addSuffix = true,
     useStrict = false,
+    unit,
+    roundingMethod,
   } = converterOptions;
 
   if (useStrict) {
     return formatDistanceToNowStrict(date, {
       addSuffix,
       locale,
+      unit,
+      roundingMethod,
     });
   }
 
