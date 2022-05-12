@@ -1,11 +1,11 @@
 import { App } from "vue";
 import { createTimeago } from "./timeago";
-import { converterOptions } from "./converter/defaultConverter";
+import { ConverterOptions } from "./converter/defaultConverter";
 
 export interface TimeagoOptions {
   name?: string;
   converter?: unknown;
-  converterOptions?: converterOptions;
+  converterOptions?: ConverterOptions;
   locale?: Locale;
 }
 

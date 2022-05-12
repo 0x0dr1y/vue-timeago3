@@ -1,5 +1,5 @@
 import defaultConverter, {
-  converterOptions,
+  ConverterOptions,
 } from "./converter/defaultConverter";
 import {
   defineComponent,
@@ -40,7 +40,7 @@ const createTimeago = (
         default: null,
       },
       converterOptions: {
-        type: Object as PropType<converterOptions>,
+        type: Object as PropType<ConverterOptions>,
         required: false,
         default: null,
       },
@@ -68,7 +68,7 @@ const createTimeago = (
         datetime?: string | number | Date
       ): ((
         datetime: string,
-        converter: converterOptions
+        converter: ConverterOptions
       ) => string | unknown) => {
         const converter = props.converter || defaultConverter;
         return converter(

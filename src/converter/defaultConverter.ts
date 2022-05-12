@@ -5,43 +5,42 @@ import {
   formatDistanceToNowStrict,
 } from "date-fns";
 
-export type converterOptions = {
+interface DefaultConverterOptions {
+  useStrict?: false;
   includeSeconds?: boolean;
   addSuffix?: boolean;
-  useStrict?: boolean;
-  unit?: 'second' | 'minute' | 'hour' | 'day' | 'month' | 'year';
-  roundingMethod?: 'floor' | 'ceil' | 'round';
-};
+}
+
+interface StrictConverterOptions {
+  useStrict: true;
+  addSuffix?: boolean;
+  unit?: "second" | "minute" | "hour" | "day" | "month" | "year";
+  roundingMethod?: "floor" | "ceil" | "round";
+}
+
+export type ConverterOptions = DefaultConverterOptions | StrictConverterOptions;
 
 export default (
   date: string | Date,
-  converterOptions: converterOptions = {},
+  converterOptions: ConverterOptions = {},
   locale?: Locale
 ): string => {
   if (typeof date === "string") {
     date = parseISO(date);
   }
 
-  const {
-    includeSeconds,
-    addSuffix = true,
-    useStrict = false,
-    unit,
-    roundingMethod,
-  } = converterOptions;
-
-  if (useStrict) {
+  if (converterOptions.useStrict) {
     return formatDistanceToNowStrict(date, {
-      addSuffix,
+      addSuffix: converterOptions.addSuffix ?? true,
       locale,
-      unit,
-      roundingMethod,
+      unit: converterOptions.unit,
+      roundingMethod: converterOptions.roundingMethod,
     });
   }
 
   return formatDistanceToNow(date, {
-    includeSeconds,
-    addSuffix,
+    includeSeconds: converterOptions.includeSeconds,
+    addSuffix: converterOptions.addSuffix ?? true,
     locale,
   });
 };
