@@ -1,5 +1,12 @@
 
 
+# [2.3.0](https://github.com/MrDeerly/vue-timeago3/compare/v2.2.1...v2.3.0) (2022-06-11)
+
+
+### Features
+
+* add type checking for strict converterOptions ([#262](https://github.com/MrDeerly/vue-timeago3/issues/262)) ([de6e9f7](https://github.com/MrDeerly/vue-timeago3/commit/de6e9f7808509584e6496cd90026070d6e711afa))
+
 # [2.2.0](https://github.com/MrDeerly/vue-timeago3/compare/v2.1.1...v2.2.0) (2022-04-30)
 
 
