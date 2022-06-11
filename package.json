@@ -72,7 +72,7 @@
     "vite": "^2.9.9",
     "vitepress": "^0.22.4",
     "vue-eslint-parser": "^9.0.2",
-    "vue-tsc": "^0.34.16"
+    "vue-tsc": "^0.37.3"
   },
   "description": "vue-timeago3 is a tiny component for Vue.js 3, to show the time passed since a specific date. You simply pass a date and get somewhat like 10 seconds ago, 3 weeks ago, ... printed by the component",
   "author": "MrDeerly"
