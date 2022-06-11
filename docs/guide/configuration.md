@@ -76,20 +76,34 @@ The following props are available and can be used:
 
 > A **converter** that formats regular dates in `x Seconds ago`, or in `xxx` style. Check out the [default converter](https://github.com/MrDeerly/vue-timeago3/blob/master/src/converter/defaultConverter.ts) which uses [date-fns formatDistanceToNow](https://date-fns.org/v2.24.0/docs/formatDistanceToNow)
 
-- **type:** `(date, converterOptions) => string`
+- **type:** `(date, defaultConverterOptions | strictConverterOptions) => string`
 - **required:** :x:
 - **default:** `null`
 
 ---
 
-#### converterOptions
+#### defaultConverterOptions
 
-> The converterOptions allow you to adjust the default converter' configuration. The default supports the main options of `date-fns`, naming:
+> The defaultConverterOptions allow you to adjust the default converter' configuration. The default supports the main options of `date-fns`, naming:
 >
-> - `includeSeconds` - `boolean` - distances less than a minute are more detailed
-> - `addSuffix` - `boolean` - results specifies if now is earlier or later than the date passed
-> - `useStrict` - `boolean` - use strict units, does not use helpers like 'almost', 'over', 'less than' and the like
+> - `includeSeconds` - `boolean | undefined` - distances less than a minute are more detailed
+> - `addSuffix` - `boolean | undefined` - results specifies if now is earlier or later than the date passed
+> - `useStrict` - `false | undefined` - **if `true` you need to use the `strictConverterOptions` (see below)**
 
+- **type:** `Record<string, boolean>`
+- **required:** :x:
+- **default:** `{}`
+
+---
+
+#### strictConverterOptions
+
+> The strictConverterOptions allow you to use the defaultConverter in strict mode. The strict conversion supports the main options of `date-fns`, naming:
+>
+> - `useStrict` - `true` - enables strict converting
+> - `addSuffix` - `boolean | undefined` - results specifies if now is earlier or later than the date passed
+> - `unit` - `"second" | "minute" | "hour" | "day" | "month" | "year" | undefined` - defines which unit is used for the conversion
+> - `roundingMethod` - `"floor" | "ceil" | "round" | undefined` - defines which method is used to round the time
 - **type:** `Record<string, boolean>`
 - **required:** :x:
 - **default:** `{}`
@@ -153,20 +167,34 @@ If both global and component options are used, the component options will be hig
 
 > A **converter** that formats regular dates in `x Seconds ago`, or in `xxx` style. Check out the [default converter](https://github.com/MrDeerly/vue-timeago3/blob/master/src/converter/defaultConverter.ts) which uses [date-fns formatDistanceToNow](https://date-fns.org/v2.24.0/docs/formatDistanceToNow)
 
-- **type:** `(date, converterOptions) => string`
+- **type:** `(date, defaultConverterOptions | strictConverterOptions) => string`
 - **required:** :x:
 - **default:** `null`
 
 ---
 
-#### converterOptions
+#### defaultConverterOptions
 
-> The converterOptions allow you to adjust the default converter' configuration. The default supports the main options of `date-fns`, naming:
+> The defaultConverterOptions allow you to adjust the default converter' configuration. The default supports the main options of `date-fns`, naming:
 >
-> - `includeSeconds` - `boolean` - distances less than a minute are more detailed
-> - `addSuffix` - `boolean` - results specifies if now is earlier or later than the date passed
-> - `useStrict` - `boolean` - use strict units, does not use helpers like 'almost', 'over', 'less than' and the like
+> - `includeSeconds` - `boolean | undefined` - distances less than a minute are more detailed
+> - `addSuffix` - `boolean | undefined` - results specifies if now is earlier or later than the date passed
+> - `useStrict` - `false | undefined` - **if `true` you need to use the `strictConverterOptions` (see below)**
 
+- **type:** `Record<string, boolean>`
+- **required:** :x:
+- **default:** `{}`
+
+---
+
+#### strictConverterOptions
+
+> The strictConverterOptions allow you to use the defaultConverter in strict mode. The strict conversion supports the main options of `date-fns`, naming:
+>
+> - `useStrict` - `true` - enables strict converting
+> - `addSuffix` - `boolean | undefined` - results specifies if now is earlier or later than the date passed
+> - `unit` - `"second" | "minute" | "hour" | "day" | "month" | "year" | undefined` - defines which unit is used for the conversion
+> - `roundingMethod` - `"floor" | "ceil" | "round" | undefined` - defines which method is used to round the time
 - **type:** `Record<string, boolean>`
 - **required:** :x:
 - **default:** `{}`
