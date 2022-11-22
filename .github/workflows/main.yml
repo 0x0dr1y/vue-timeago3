@@ -49,5 +49,7 @@ jobs:
           cache: "npm"
       - name: Install dependencies
         run: npm install
+      - name: Generate definitions
+        run: npx vue-tsc --declaration --emitDeclarationOnly
       - name: Build Library
         run: npx vite build
