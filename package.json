@@ -52,7 +52,7 @@
     "vue": "^3.2.6"
   },
   "devDependencies": {
-    "@release-it/conventional-changelog": "^5.0.0",
+    "@release-it/conventional-changelog": "^6.0.0",
     "@types/jest": "^27.5.0",
     "@types/node": "^20.1.1",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
