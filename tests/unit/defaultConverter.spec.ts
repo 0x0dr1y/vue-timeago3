@@ -5,11 +5,12 @@ import {
   parseISO,
 } from "date-fns";
 import { es } from "date-fns/locale";
+import {vi, describe, expect, it} from 'vitest';
 
-jest.mock("date-fns", () => ({
-  parseISO: jest.fn(),
-  formatDistanceToNow: jest.fn(),
-  formatDistanceToNowStrict: jest.fn(),
+vi.mock("date-fns", () => ({
+  parseISO: vi.fn(),
+  formatDistanceToNow: vi.fn(),
+  formatDistanceToNowStrict: vi.fn(),
 }));
 
 const date = new Date();
