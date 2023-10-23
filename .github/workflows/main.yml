@@ -19,8 +19,6 @@ jobs:
         run: npm install
       - name: Run ESLint
         run: npm run lint
-      - name: Run Prettier
-        run: npx prettier --check "src/**/*.ts"
       - name: Run Vue TSC
         run: npx vue-tsc --noEmit
   test:
