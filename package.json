@@ -6,7 +6,7 @@
   ],
   "main": "./dist/vue-timeago.umd.js",
   "module": "./dist/vue-timeago.es.js",
-  "typings": "./dist_types/**/*.d.ts",
+  "types": "./dist/vue-timeago.d.ts",
   "exports": {
     ".": {
       "import": "./dist/vue-timeago.es.js",
