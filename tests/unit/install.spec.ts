@@ -1,5 +1,6 @@
 import * as vue from "vue";
 import install from "../../src/install";
+import {vi, describe, expect, it} from 'vitest';
 
 const App = {};
 
@@ -12,7 +13,7 @@ describe("exports", () => {
 describe("plugin", () => {
   it("should load the plugin", () => {
     const app = vue.createApp(App);
-    const componentSpy = jest.spyOn(app, "component");
+    const componentSpy = vi.spyOn(app, "component");
     expect(componentSpy).toHaveBeenCalledTimes(0);
     app.use(install);
     expect(componentSpy).toHaveBeenCalledTimes(1);
@@ -20,7 +21,7 @@ describe("plugin", () => {
 
   it("should not load plugin twice", () => {
     const app = vue.createApp(App);
-    const componentSpy = jest.spyOn(app, "component");
+    const componentSpy = vi.spyOn(app, "component");
     app.config.globalProperties.$timeago = "already defined";
     app.use(install);
     expect(componentSpy).not.toHaveBeenCalled();
@@ -30,7 +31,8 @@ describe("plugin", () => {
     const app = vue.createApp(App);
     app.version = "2.1";
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    const consoleSpy = jest.spyOn(console, "warn").mockImplementation(() => {});
+    const consoleSpy = vi.spyOn(console, "warn").mockImplementation(() => {
+    });
 
     app.use(install);
 
