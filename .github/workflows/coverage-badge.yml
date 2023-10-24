@@ -18,9 +18,9 @@ jobs:
         run: npm install
       - name: Run unit tests with coverage
         run: |
-          SUMMARY="$(npm coverage | tail -7 | head -1)"
+          SUMMARY="$(npm run coverage | tail -7 | head -1)"
           TOKENS=($SUMMARY)
-          echo "COVERAGE=$(echo ${SUMMARY})" >> $GITHUB_ENV
+          echo "COVERAGE=$(echo ${TOKENNS[3})" >> $GITHUB_ENV
       - name: Create Coverage Badge
         uses: schneegans/dynamic-badges-action@v1.1.0
         with:
