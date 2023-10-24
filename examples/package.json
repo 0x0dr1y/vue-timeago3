@@ -11,7 +11,7 @@
   "dependencies": {
     "examples": "file:",
     "vue": "^3.2.16",
-    "vue-timeago3": "file:../vue-timeago3-\.3.2.tgz"
+    "vue-timeago3": "file:../vue-timeago3-2.3.2.tgz"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
