@@ -20,7 +20,7 @@ jobs:
         run: |
           npm run coverage
           STATEMENTS=cat coverage/coverage-summary.json | jq -r '.total.statements.pct' 
-          echo "COVERAGE=$(echo '${STATEMENTS}%')" >> $GITHUB_ENV >> $GITHUB_ENV
+          echo "COVERAGE=$(echo '${STATEMENTS}%')" >> $GITHUB_ENV
       - name: Create Coverage Badge
         uses: schneegans/dynamic-badges-action@v1.1.0
         with:
