@@ -29,5 +29,5 @@ jobs:
           filename: vue-timeago3_coverage.json
           label: Test Coverage
           message: ${{ env.COVERAGE }}
-          namedLogo: jest
+          namedLogo: vitest
           color: brightgreen
