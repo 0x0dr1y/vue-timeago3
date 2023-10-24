@@ -12,15 +12,13 @@ jobs:
       - name: Setup NodeJS
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: "18"
           cache: "npm"
       - name: Install dependencies
         run: npm install
       - name: Run unit tests with coverage
         run: |
-          SUMMARY="$(npm run coverage | tail -7 | head -1)"
-          TOKENS=($SUMMARY)
-          echo "COVERAGE=$(echo ${TOKENS[3})" >> $GITHUB_ENV
+          echo coverage/coverage-summary.json | jq '.total.statements.pct' >> $GITHUB_ENV
       - name: Create Coverage Badge
         uses: schneegans/dynamic-badges-action@v1.1.0
         with:
