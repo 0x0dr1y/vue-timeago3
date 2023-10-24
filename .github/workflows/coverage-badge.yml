@@ -19,7 +19,7 @@ jobs:
       - name: Run unit tests with coverage
         run: |
           npm run coverage
-          STATEMENTS=cat coverage/coverage-summary.json | jq -r '.total.statements.pct' 
+          STATEMENTS=$(cat coverage/coverage-summary.json | jq -r '.total.statements.pct') 
           COV="${STATEMENTS}%"
           echo "COVERAGE=$(echo ${COV})" >> $GITHUB_ENV
       - name: Create Coverage Badge
