@@ -19,7 +19,8 @@ jobs:
       - name: Run unit tests with coverage
         run: |
           npm run coverage
-          cat coverage/coverage-summary.json | jq -r '.total.statements.pct' >> $GITHUB_ENV
+          COVERAGE=cat coverage/coverage-summary.json | jq -r '.total.statements.pct' 
+          echo "${COVERAGE}%" >> $GITHUB_ENV
       - name: Create Coverage Badge
         uses: schneegans/dynamic-badges-action@v1.1.0
         with:
