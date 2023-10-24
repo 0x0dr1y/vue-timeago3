@@ -11,9 +11,9 @@ A time ago component for Vue.js 3 based on [vue-timeago for Vue 2 by egoist](htt
   - [Register Plugin](#sectionRegister)
   - [Component](#sectionComponent)
 
-## About
-
 <a name="sectionAbout"/>
+
+## About
 
 **vue-timeago3** is a tiny component for Vue.js 3, to show the time passed since a specific date. You simply pass a date and get somewhat like `10 seconds ago`, `3 weeks ago`, `...` printed by the component
 
@@ -29,15 +29,16 @@ A time ago component for Vue.js 3 based on [vue-timeago for Vue 2 by egoist](htt
 
 See [date-fns/formatDistanceToNow](https://date-fns.org/v2.26.0/docs/formatDistanceToNow) for more details.
 
-## Usage
-
 <a name="sectionUsage"/>
+
+## Usage
 
 **Visit the [docs](https://mrdeerly.github.io/vue-timeago3/) for more details!**
 
+<a name="sectionInstall"/>
+
 ### Installation
 
-<a name="sectionInstall"/>
 Currently the plugin is available via NPM and Yarn. To install it use one of the two package managers.
 
 ```javascript
@@ -48,11 +49,11 @@ $ npm install vue-timeago3
 $ yarn add vue-timeago3
 ```
 
+<a name="sectionRegister"/>
+
 ### Register Plugin
 
 To register the plugin simply import and register it using the new global vue3 api. As an alternative the plugin could be imported in specific components only.
-
-<a name="sectionRegister"/>
 
 ```javascript
 // src/main.ts
@@ -99,9 +100,9 @@ As of version 1.0.0 the following options are available:
 | **defaultConverterOptions** | `Object`                                                                   | Pass some extra settings to the default converter mentioned above. It supports the main options of `date-fns`, namingly: <br/><br/> `includeSeconds` - `boolean` - distances less than a minute are more detailed </br> `addSuffix` - `boolean` - results specifies if now is earlier or later than the date passed <br/> `useStrict` - `false` -  **if `true` you need to use the `strictConverterOptions` (see below)**                                                                                                                                  |
 | **strictConverterOptions**  | `Object`                                                                   | Pass some extra settings to the default converter mentioned above. It supports the main options of `date-fns` strict converter, namingly: <br/><br/> `useStrict` - `true` - needs to be `true`, otherwise the `defaultConverterOptions` have to be used (see above) </br> `addSuffix` - `boolean` - results specifies if now is earlier or later than the date passed <br/> `unit` - `second, minute, hour, day, month, year` if specified, will force a unit<br/>`roundingMethod` - `floor, ceil, round` which way to round partial units (default=round) |
 
-### Component
-
 <a name="sectionComponent"/>
+
+### Component
 
 Once the plugin is registered you can straight up use it in your app.
 

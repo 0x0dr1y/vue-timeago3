@@ -4,6 +4,7 @@ import { mount, config } from "@vue/test-utils";
 import TimeAgo from "../../src/install";
 import { defineComponent, nextTick, Plugin } from "vue";
 import { de, es } from "date-fns/locale";
+import {vi, describe, expect, it} from 'vitest';
 
 const TestComponent = {
   name: "test-component",
