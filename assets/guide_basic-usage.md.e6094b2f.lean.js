@@ -1,0 +1,1 @@
+import{_ as a,c as n,o as s,a as t}from"./app.feb47bda.js";const h='{"title":"Basic Usage","description":"","frontmatter":{},"headers":[{"level":2,"title":"Custom language","slug":"custom-language"}],"relativePath":"guide/basic-usage.md"}',p={},e=t("",9),o=[e];function c(l,u,i,r,k,d){return s(),n("div",null,o)}var m=a(p,[["render",c]]);export{h as __pageData,m as default};

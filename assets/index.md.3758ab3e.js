@@ -1,0 +1,19 @@
+import{_ as a,c as n,o as s,a as t}from"./app.feb47bda.js";const h=`{"title":"Home","description":"","frontmatter":{"home":true,"heroText":"\u23F3 vue-timeago3","tagline":"A super tiny timeago component for Vue.js 3","actionText":"Get Started","actionLink":"/guide/getting-started","features":[{"title":"TypeScript support","details":"The library was completely written in TypeScript, which brings a great support for Vue3' Composition API."},{"title":"Performant","details":"Thanks to Vue.js 3.0 the component is both super tiny and fast. So fast, that you won't even notice it."},{"title":"date-fns v2.26","details":"Thanks to date-fns you have the full control over everything, including the language and converter options."}],"footer":"MIT Licensed | Copyright \xA9 2021-present MrDeerly"},"headers":[{"level":2,"title":"Example Usage","slug":"example-usage"}],"relativePath":"index.md"}`,e={},p=t(`<hr><div align="center"><h2 id="example-usage" tabindex="-1">Example Usage <a class="header-anchor" href="#example-usage" aria-hidden="true">#</a></h2><div class="language-"><pre><code>Now was: less than 5 seconds ago
+</code></pre></div><div class="language-vue"><div class="highlight-lines"><br><br><div class="highlighted">\xA0</div><br><br><br><br><br><br><br><br><div class="highlighted">\xA0</div><br><br><br><br><br><br></div><pre><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>
+    Now was: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>timeago</span> <span class="token attr-name">:datetime</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>date<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">date</span><span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// current Date</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div>`,2),o=[p];function c(l,i,r,u,k,d){return s(),n("div",null,o)}var m=a(e,[["render",c]]);export{h as __pageData,m as default};

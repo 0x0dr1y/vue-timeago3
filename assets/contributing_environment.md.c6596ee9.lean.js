@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as n,a as s}from"./app.feb47bda.js";const _='{"title":"Setup","description":"","frontmatter":{},"headers":[],"relativePath":"contributing/environment.md"}',a={},o=s("",2),r=[o];function i(p,c,l,d,u,h){return n(),t("div",null,r)}var m=e(a,[["render",i]]);export{_ as __pageData,m as default};

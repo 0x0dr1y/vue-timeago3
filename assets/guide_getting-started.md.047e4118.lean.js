@@ -1,0 +1,1 @@
+import{_ as n,c as s,o as a,a as t}from"./app.feb47bda.js";const m='{"title":"Getting Started","description":"","frontmatter":{},"headers":[],"relativePath":"guide/getting-started.md"}',e={},o=t("",13),p=[o];function i(c,r,l,u,g,d){return a(),s("div",null,p)}var h=n(e,[["render",i]]);export{m as __pageData,h as default};
