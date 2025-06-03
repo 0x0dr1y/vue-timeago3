@@ -10,7 +10,8 @@
   "exports": {
     ".": {
       "import": "./dist/vue-timeago.es.js",
-      "require": "./dist/vue-timeago.umd.js"
+      "require": "./dist/vue-timeago.umd.js",
+      "types": "./dist/vue-timeago.d.ts"
     }
   },
   "license": "MIT",
