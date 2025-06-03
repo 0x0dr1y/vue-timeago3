@@ -6,11 +6,11 @@ jobs:
   checks:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup NodeJS
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "22"
           cache: "npm"
       - name: Install dependencies
         run: npm install
@@ -20,7 +20,7 @@ jobs:
           STATEMENTS=$(cat coverage/coverage-summary.json | jq -r '.total.statements.pct') 
           echo "COVERAGE=$(echo ${STATEMENTS}%)" >> $GITHUB_ENV
       - name: Create Coverage Badge
-        uses: schneegans/dynamic-badges-action@v1.1.0
+        uses: schneegans/dynamic-badges-action@v1.7.0
         with:
           auth: ${{ secrets.GIST_SECRET }}
           gistID: 51a8c6c4f125bd6ec25a14a6f12e28bc
